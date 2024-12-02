@@ -1,13 +1,14 @@
+import {Footer} from "@/components/footer";
 import Providers from "@/components/layout/Providers";
-import { Navbar } from "@/components/layout/navbar";
-import { JSON_LD, METADATA } from "@/constants/Metadata";
-import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Dancing_Script, Signika_Negative } from "next/font/google";
+import {Navbar} from "@/components/navbar";
+import {JSON_LD, METADATA} from "@/constants/Metadata";
+import {cn} from "@/lib/utils";
+import type {Metadata} from "next";
+import {Dancing_Script, Inter} from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Signika_Negative({
+const inter = Inter({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-in",
@@ -37,6 +38,7 @@ export default function RootLayout({
 					<Providers>
 						<Navbar />
 						{children}
+						<Footer/>
 					</Providers>
 				</main>
 			</body>

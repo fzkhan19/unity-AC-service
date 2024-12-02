@@ -1,0 +1,96 @@
+"use client";
+
+import { ToggleTheme as ToggleThemeComponent } from "@/components/layout/toggle-theme";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import { Menu, PhoneCall } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import * as React from "react";
+
+const routes = [
+	{ href: "/", label: "Home" },
+	{ href: "/about", label: "About" },
+	{ href: "/services", label: "Services" },
+	{ href: "/portfolio", label: "Portfolio" },
+	{ href: "/careers", label: "Careers" },
+	{ href: "/contact", label: "Contact" },
+	{ href: "/calculator", label: "AC Calculator" },
+];
+
+export function Navbar() {
+	const pathname = usePathname();
+	const ToggleTheme = React.memo(ToggleThemeComponent);
+	const [isOpen, setIsOpen] = React.useState(false);
+
+	return (
+		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+			<div className="flex h-16 items-center justify-between px-8">
+				<div className="flex w-full grow items-center space-x-2">
+					<ToggleTheme className="hidden md:flex" />
+					<Link href="/" className="flex items-center space-x-2">
+						<span className="font-bold text-xl">Unity A.C Service</span>
+					</Link>
+				</div>
+
+				<nav className="hidden w-full items-center justify-between gap-8 md:flex">
+					<div className="flex w-full items-center gap-4">
+						{routes.map((route) => (
+							<Link
+								key={route.href}
+								href={route.href}
+								className={cn(
+									"font-medium text-sm transition-colors hover:text-primary",
+									pathname === route.href
+										? "text-foreground"
+										: "text-muted-foreground",
+								)}
+							>
+								{route.label}
+							</Link>
+						))}
+					</div>
+					<Button size="sm">
+						<PhoneCall className="mr-2 h-4 w-4" />
+						Emergency Service
+					</Button>
+				</nav>
+
+				<Sheet open={isOpen} onOpenChange={setIsOpen}>
+					<div className="flex items-center">
+						<ToggleTheme className="md:hidden" />
+						<SheetTrigger asChild className="md:hidden">
+							<Button variant="ghost" size="icon">
+								<Menu className="h-6 w-6" />
+							</Button>
+						</SheetTrigger>
+					</div>
+					<SheetContent side="right">
+						<nav className="flex flex-col space-y-4">
+							{routes.map((route) => (
+								<Link
+									key={route.href}
+									href={route.href}
+									className={cn(
+										"font-medium text-sm transition-colors hover:text-primary",
+										pathname === route.href
+											? "text-foreground"
+											: "text-muted-foreground",
+									)}
+									onClick={() => setIsOpen(false)}
+								>
+									{route.label}
+								</Link>
+							))}
+							<Button size="sm">
+								<PhoneCall className="mr-2 h-4 w-4" />
+								Emergency Service
+							</Button>
+						</nav>
+					</SheetContent>
+				</Sheet>
+			</div>
+		</header>
+	);
+}
