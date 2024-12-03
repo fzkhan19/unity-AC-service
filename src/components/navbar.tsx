@@ -26,15 +26,14 @@ export function Navbar() {
 
 	return (
 		<header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-			<div className="flex h-16 items-center justify-between px-8">
+			<div className="flex h-16 items-center justify-between px-4">
 				<div className="flex w-full grow items-center space-x-2">
-					<ToggleTheme className="hidden md:flex" />
 					<Link href="/" className="flex items-center space-x-2">
-						<span className="font-bold text-xl">Unity A.C Service</span>
+						<span className="font-bold text-xl">❄️ Unity A.C. Service</span>
 					</Link>
 				</div>
 
-				<nav className="hidden w-full items-center justify-between gap-8 md:flex">
+				<nav className="hidden w-full items-center justify-between gap-4 md:flex">
 					<div className="flex w-full items-center gap-4">
 						{routes.map((route) => (
 							<Link
@@ -55,6 +54,7 @@ export function Navbar() {
 						<PhoneCall className="mr-2 h-4 w-4" />
 						Emergency Service
 					</Button>
+					<ToggleTheme className="hidden md:flex" />
 				</nav>
 
 				<Sheet open={isOpen} onOpenChange={setIsOpen}>
