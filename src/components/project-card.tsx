@@ -8,6 +8,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { MapPin, Wrench } from "lucide-react";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -26,7 +27,7 @@ export function ProjectCard({
 	serviceType,
 }: ProjectCardProps) {
 	return (
-		<Card className="overflow-hidden">
+		<Card className="border-none bg-transparent px-14 shadow-none">
 			<Carousel className="w-full">
 				<CarouselContent>
 					{images.map((image, index) => (
@@ -47,14 +48,16 @@ export function ProjectCard({
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
-			<CardContent className="p-6">
+			<CardContent className="p-0 pt-6">
 				<h3 className="font-semibold text-xl">{title}</h3>
 				<p className="mt-2 text-muted-foreground text-sm">{description}</p>
 				<div className="mt-4 flex flex-wrap gap-2">
-					<span className="rounded-full bg-primary/10 px-3 py-1 font-medium text-primary text-xs">
+					<span className="flex items-center gap-1 rounded-full bg-muted px-3 py-1 font-medium text-primary text-xs">
+						<Wrench className="size-[12px]" />
 						{serviceType}
 					</span>
-					<span className="rounded-full bg-muted px-3 py-1 font-medium text-xs">
+					<span className="flex items-center gap-1 rounded-full px-3 py-1 font-medium text-xs">
+						<MapPin className="size-[12px]" />
 						{location}
 					</span>
 				</div>
