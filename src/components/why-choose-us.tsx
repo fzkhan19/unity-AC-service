@@ -10,33 +10,33 @@ import {
 const reasons = [
 	{
 		icon: Award,
-		title: "25+ Years Experience",
-		description: "Trusted expertise in AC solutions since 1995",
+		title: "Over 6 Years of Expertise",
+		description: "Delivering reliable AC solutions with a proven track record since 2017",
 	},
 	{
 		icon: Shield,
-		title: "Licensed & Insured",
-		description: "Fully certified technicians and insured services",
+		title: "Fully Licensed & Insured",
+		description: "Our certified technicians provide safe and insured services",
 	},
 	{
 		icon: Clock4,
-		title: "24/7 Emergency Service",
-		description: "Round-the-clock support when you need it most",
+		title: "24/7 Emergency Support",
+		description: "Always available to assist you in urgent situations",
 	},
 	{
 		icon: ThumbsUp,
-		title: "Satisfaction Guaranteed",
-		description: "100% satisfaction with our service quality",
+		title: "Guaranteed Satisfaction",
+		description: "We strive for 100% customer satisfaction with every service",
 	},
 	{
 		icon: Lightbulb,
-		title: "Energy Efficient Solutions",
-		description: "Eco-friendly and cost-effective AC systems",
+		title: "Eco-Friendly Solutions",
+		description: "Offering energy-efficient and sustainable AC systems",
 	},
 	{
 		icon: HeartHandshake,
-		title: "Competitive Pricing",
-		description: "Best value for professional AC services",
+		title: "Affordable Pricing",
+		description: "Providing the best value for high-quality AC services",
 	},
 ];
 
@@ -47,7 +47,7 @@ export function WhyChooseUs() {
 				<div className="text-center">
 					<h2 className="font-bold text-3xl tracking-tight">Why Choose Us</h2>
 					<p className="mt-4 text-muted-foreground">
-						Discover what makes us the preferred choice for AC solutions
+						Explore the reasons why we are the top choice for your AC needs
 					</p>
 				</div>
 				<div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

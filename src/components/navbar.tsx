@@ -14,7 +14,6 @@ const routes = [
 	{ href: "/about", label: "About" },
 	{ href: "/services", label: "Services" },
 	{ href: "/portfolio", label: "Portfolio" },
-	{ href: "/careers", label: "Careers" },
 	{ href: "/contact", label: "Contact" },
 	{ href: "/calculator", label: "AC Calculator" },
 ];
@@ -83,10 +82,12 @@ export function Navbar() {
 									{route.label}
 								</Link>
 							))}
-							<Button size="sm">
-								<PhoneCall className="mr-2 h-4 w-4" />
-								Emergency Service
-							</Button>
+							<Link href={"tel:9712142195"}>
+								<Button size="sm">
+									<PhoneCall className="mr-2 h-4 w-4" />
+									Emergency Service
+								</Button>
+							</Link>
 						</nav>
 					</SheetContent>
 				</Sheet>

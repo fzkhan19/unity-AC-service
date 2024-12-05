@@ -1,10 +1,36 @@
-import { ContactForm } from "@/components/contact-form";
 import { Features } from "@/components/features";
 import { Projects } from "@/components/projects";
 import { Button } from "@/components/ui/button";
 import { WhyChooseUs } from "@/components/why-choose-us";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock, Mail, MapPin, PhoneCall } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+
+const contactInfo = [
+	{
+		icon: PhoneCall,
+		title: "Phone",
+		details: ["+91 9712142195", "+91 9712142195"],
+	},
+	{
+		icon: Mail,
+		title: "Email",
+		details: ["info@unityac.com"],
+	},
+	{
+		icon: MapPin,
+		title: "Location",
+		details: [
+			"Shop No. B 22, Mexican Plaza, Road No. 3, 4",
+			"Near Bank of Baroda, Udhna, Surat-394610, Gujarat, India",
+		],
+	},
+	{
+		icon: Clock,
+		title: "Hours",
+		details: ["Mon-Fri: 10:00 AM - 8:00 PM", "24/7 Emergency Service"],
+	},
+];
 
 export default function Home() {
 	return (
@@ -34,7 +60,7 @@ export default function Home() {
 							</div>
 						</div>
 						<div className="relative hidden md:block">
-							{/* Add hero image here */}
+							<Image src={"/hero.webp"} alt="hero" width={1000} height={500} />
 						</div>
 					</div>
 				</div>
@@ -49,17 +75,29 @@ export default function Home() {
 			{/* Why Choose Us */}
 			<WhyChooseUs />
 
-			{/* Contact Form */}
+			{/* Contact Details */}
 			<section className="bg-muted py-20">
-				<div className="container">
+				<div className="container flex flex-col items-center gap-8">
 					<div className="mx-auto max-w-2xl text-center">
-						<h2 className="font-bold text-3xl tracking-tight">Get in Touch</h2>
+						<h2 className="font-bold text-3xl tracking-tight">Contact Us</h2>
 						<p className="mt-4 text-muted-foreground">
-							Contact us for a free consultation and quote.
+							Get in touch with our team for all your AC needs
 						</p>
 					</div>
-					<div className="mx-auto mt-8 max-w-xl">
-						<ContactForm />
+					<div className="mx-auto grid max-w-3xl gap-6 pl-12 md:grid-cols-2">
+						{contactInfo.map((item) => (
+							<div key={item.title} className="flex items-start gap-4 p-6">
+								<item.icon className="h-6 w-6 text-primary" />
+								<div>
+									<h3 className="font-semibold">{item.title}</h3>
+									{item.details.map((detail) => (
+										<p key={detail} className="mt-1 text-muted-foreground">
+											{detail}
+										</p>
+									))}
+								</div>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>

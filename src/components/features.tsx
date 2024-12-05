@@ -6,37 +6,44 @@ import {
 	ThumbsUp,
 	Wrench,
 } from "lucide-react";
+import Image from "next/image";
 
 const features = [
 	{
 		icon: Fan,
 		title: "AC Installation",
 		description: "Professional installation of all AC types with warranty.",
+		image: "/img/service-1.jpg",
 	},
 	{
 		icon: Wrench,
-		title: "Maintenance",
+		title: "Cooling Services",
 		description: "Regular maintenance to ensure optimal performance.",
+		image: "/img/service-2.jpg",
 	},
 	{
 		icon: Clock,
-		title: "24/7 Service",
+		title: "Heating Services",
 		description: "Emergency repairs and support available round the clock.",
+		image: "/img/service-3.jpg",
 	},
 	{
 		icon: Shield,
-		title: "Certified Experts",
+		title: "Maintenance & Repair",
 		description: "Fully certified and experienced technicians.",
+		image: "/img/service-4.jpg",
 	},
 	{
 		icon: ThumbsUp,
-		title: "Quality Parts",
+		title: "Indoor Air Quality",
 		description: "Genuine spare parts and components.",
+		image: "/img/service-5.jpg",
 	},
 	{
 		icon: HeartHandshake,
-		title: "Customer Support",
+		title: "Annual Inspections",
 		description: "Dedicated support team for all your queries.",
+		image: "/img/service-6.jpg",
 	},
 ];
 
@@ -56,8 +63,17 @@ export function Features() {
 							key={feature.title}
 							className="rounded-lg border bg-card p-6 shadow-sm"
 						>
-							<feature.icon className="h-12 w-12 text-primary" />
-							<h3 className="mt-4 font-semibold text-xl">{feature.title}</h3>
+							<Image
+								src={feature.image}
+								alt={feature.title}
+								className="mt-4 rounded-lg"
+								width={400}
+								height={300}
+							/>
+							<h3 className="mt-4 flex items-center gap-2 font-semibold text-xl">
+								<feature.icon className="size-5 text-primary" />
+								{feature.title}
+							</h3>
 							<p className="mt-2 text-muted-foreground">
 								{feature.description}
 							</p>

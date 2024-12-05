@@ -10,7 +10,12 @@ if (process.env.NEXT_PUBLIC_NODE_ENV === "development") {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ["images.unsplash.com","assets.tina.io"],
+		domains: [
+			"images.unsplash.com",
+			"assets.tina.io",
+			"source.unsplash.com",
+			"images.pexels.com",
+		],
 	},
 };
 

@@ -3,30 +3,15 @@ import { Award, Building2, Target, Users } from "lucide-react";
 
 const teamMembers = [
 	{
-		name: "John Smith",
-		role: "CEO & Founder",
-		image:
-			"https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+		name: "Sayeed Khan",
+		role: "Co-Founder & Co-Owner",
+		image: "",
 	},
 	{
-		name: "Sarah Johnson",
-		role: "Technical Director",
-		image:
-			"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+		name: "Zuber Munshi",
+		role: "Co-Founder & Co-Owner",
+		image: "",
 	},
-	{
-		name: "Michael Chen",
-		role: "Service Manager",
-		image:
-			"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
-	},
-];
-
-const certifications = [
-	"ISO 9001:2015 Certified",
-	"HVAC Excellence Certification",
-	"Energy Star Partner",
-	"NATE Certified Technicians",
 ];
 
 export default function AboutPage() {
@@ -38,8 +23,11 @@ export default function AboutPage() {
 						About Unity A.C Service
 					</h1>
 					<p className="mt-6 text-lg text-muted-foreground">
-						With over 25 years of experience, we've been providing top-quality
-						AC solutions to homes and businesses across the region.
+						Founded in 2017, Unity A.C Service has been dedicated to providing
+						reliable and efficient AC solutions for both residential and
+						commercial spaces. With over 100 ongoing contracts and a team of
+						highly skilled professionals, we ensure exceptional service and
+						unmatched customer satisfaction.
 					</p>
 				</div>
 			</section>
@@ -49,25 +37,34 @@ export default function AboutPage() {
 					<div>
 						<h2 className="font-bold text-3xl">Our Story</h2>
 						<p className="mt-4 text-muted-foreground">
-							Founded in 1995, Unity A.C Service began with a simple mission: to
-							provide reliable and efficient AC solutions. Today, we're proud to
-							be one of the leading AC service providers in the region.
+							Unity A.C Service was founded in 2017 by{" "}
+							<strong className="bg-primary p-1 text-white">Sayeed Khan</strong>{" "}
+							and{" "}
+							<strong className="bg-primary p-1 text-white">
+								Zuber Munshi
+							</strong>
+							, driven by a shared vision of delivering outstanding AC
+							solutions. Today, we proudly serve a diverse clientele with a
+							dedicated team of professionals working across three specialized
+							teams, committed to excellence and innovation.{" "}
 						</p>
 					</div>
 					<div className="grid gap-4 sm:grid-cols-2">
 						<Card>
 							<CardContent className="flex flex-col items-center p-6">
 								<Users className="h-12 w-12 text-primary" />
-								<h3 className="mt-4 font-semibold">500+</h3>
-								<p className="text-muted-foreground text-sm">Clients Served</p>
+								<h3 className="mt-4 font-semibold">100+</h3>
+								<p className="text-muted-foreground text-sm">
+									Ongoing Contracts
+								</p>
 							</CardContent>
 						</Card>
 						<Card>
 							<CardContent className="flex flex-col items-center p-6">
 								<Building2 className="h-12 w-12 text-primary" />
-								<h3 className="mt-4 font-semibold">1000+</h3>
+								<h3 className="mt-4 font-semibold">3 Teams</h3>
 								<p className="text-muted-foreground text-sm">
-									Projects Completed
+									Each with 3 Skilled Workers
 								</p>
 							</CardContent>
 						</Card>
@@ -84,9 +81,9 @@ export default function AboutPage() {
 								<Target className="h-12 w-12 text-primary" />
 								<h3 className="mt-4 font-semibold text-xl">Mission</h3>
 								<p className="mt-2 text-muted-foreground">
-									To provide exceptional AC solutions that enhance comfort and
-									efficiency while maintaining the highest standards of customer
-									service.
+									To deliver reliable, high-quality AC solutions that enhance
+									comfort and efficiency for homes and businesses alike,
+									ensuring a better living environment for our clients.
 								</p>
 							</CardContent>
 						</Card>
@@ -95,9 +92,9 @@ export default function AboutPage() {
 								<Award className="h-12 w-12 text-primary" />
 								<h3 className="mt-4 font-semibold text-xl">Vision</h3>
 								<p className="mt-2 text-muted-foreground">
-									To be the most trusted and innovative AC service provider,
-									setting industry standards for quality and customer
-									satisfaction.
+									To become the region’s most trusted and innovative AC service
+									provider, setting new standards in quality and customer
+									satisfaction while continuously improving our services.
 								</p>
 							</CardContent>
 						</Card>
@@ -127,22 +124,6 @@ export default function AboutPage() {
 							</CardContent>
 						</Card>
 					))}
-				</div>
-			</section>
-
-			<section className="bg-muted py-20">
-				<div className="container">
-					<h2 className="font-bold text-3xl">Certifications & Partnerships</h2>
-					<div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-						{certifications.map((cert) => (
-							<Card key={cert}>
-								<CardContent className="flex items-center gap-4 p-6">
-									<Award className="h-8 w-8 text-primary" />
-									<span className="font-medium">{cert}</span>
-								</CardContent>
-							</Card>
-						))}
-					</div>
 				</div>
 			</section>
 		</div>
