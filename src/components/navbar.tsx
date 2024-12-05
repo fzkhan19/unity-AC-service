@@ -33,7 +33,7 @@ export function Navbar() {
 				</div>
 
 				<nav className="hidden w-full items-center justify-between gap-4 md:flex">
-					<div className="flex w-full items-center gap-4">
+					<div className="flex w-full items-center justify-end gap-4">
 						{routes.map((route) => (
 							<Link
 								key={route.href}
@@ -49,10 +49,12 @@ export function Navbar() {
 							</Link>
 						))}
 					</div>
-					<Button size="sm" variant={"destructive"}>
-						<PhoneCall className="mr-2 h-4 w-4" />
-						Emergency Service
-					</Button>
+					<Link href={"tel:9712142195"} className="pl-4">
+						<Button size="sm" variant={"destructive"}>
+							<PhoneCall className="mr-2 h-4 w-4" />
+							Emergency Service
+						</Button>
+					</Link>
 					<ToggleTheme className="hidden md:flex" />
 				</nav>
 
@@ -82,8 +84,8 @@ export function Navbar() {
 									{route.label}
 								</Link>
 							))}
-							<Link href={"tel:9712142195"}>
-								<Button size="sm">
+							<Link href={"tel:9712142195"} className="pt-4">
+								<Button size="sm" variant={"destructive"}>
 									<PhoneCall className="mr-2 h-4 w-4" />
 									Emergency Service
 								</Button>
