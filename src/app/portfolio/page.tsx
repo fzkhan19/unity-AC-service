@@ -1,8 +1,7 @@
 import { ProjectCard } from "@/components/project-card";
 import { client } from "../../../tina/__generated__/client";
 
-export const revalidate = 3600; // Revalidate every hour
-
+export const revalidate = 60; // Revalidate every hour
 export default async function PortfolioPage() {
 	const { data } = await client.queries.portfolioConnection();
 	console.log(data.portfolioConnection.edges);

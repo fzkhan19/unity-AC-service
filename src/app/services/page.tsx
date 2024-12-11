@@ -105,7 +105,7 @@ export default function ServicesPage() {
 									src={service.image}
 									alt={service.title}
 									fill
-									className="rounded-t-lg object-cover"
+									className="rounded-t-lg object-contain"
 								/>
 							</div>
 							<CardContent className="flex flex-col items-center gap-4 p-6 text-center">

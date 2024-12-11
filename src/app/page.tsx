@@ -10,7 +10,7 @@ const contactInfo = [
 	{
 		icon: PhoneCall,
 		title: "Phone",
-		details: ["+91 9712142195", "+91 9712142195"],
+		details: ["+91 9712142195", "+91 9712142197"],
 	},
 	{
 		icon: Mail,
@@ -21,14 +21,14 @@ const contactInfo = [
 		icon: MapPin,
 		title: "Location",
 		details: [
-			"Shop No. B 22, Mexican Plaza, Road No. 3, 4",
-			"Near Bank of Baroda, Udhna, Surat-394610, Gujarat, India",
+			"Shop No. A 16, Mexican Plaza, Road No. 3, 4",
+			"opp. dress gallery, Udhna, Surat-394610, Gujarat, India",
 		],
 	},
 	{
 		icon: Clock,
 		title: "Hours",
-		details: ["Mon-Fri: 10:00 AM - 8:00 PM", "24/7 Emergency Service"],
+		details: ["Mon-Sat: 10:00 AM - 8:00 PM", "24/7 Emergency Service"],
 	},
 ];
 
