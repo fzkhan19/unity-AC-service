@@ -87,10 +87,7 @@ export default function ServicesPage() {
 					<p className="mt-4 text-lg">
 						Comprehensive AC solutions tailored to your needs
 					</p>
-					<p className="mt-6 font-semibold text-2xl">
-						Emergency Services Available 24/7!
-					</p>
-					<p className="mt-2 text-lg">Call Now: 1-800-AC-UNITY</p>
+					<p className="mt-2 text-lg">Call Now: 9712142195 / 9712142197</p>
 				</div>
 			</section>
 
@@ -155,11 +152,8 @@ export default function ServicesPage() {
 						<h2 className="mt-6 font-bold text-3xl">
 							Emergency AC Services Available
 						</h2>
-						<p className="mt-4">
-							24/7 emergency AC repair services for urgent cooling problems
-						</p>
 						<p className="mt-6 font-semibold text-2xl">
-							Call Now: 1-800-AC-UNITY
+							Call Now: 9712142195 / 9712142197
 						</p>
 					</CardContent>
 				</Card>

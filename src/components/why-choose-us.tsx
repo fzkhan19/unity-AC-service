@@ -11,7 +11,8 @@ const reasons = [
 	{
 		icon: Award,
 		title: "Over 6 Years of Expertise",
-		description: "Delivering reliable AC solutions with a proven track record since 2017",
+		description:
+			"Delivering reliable AC solutions with a proven track record since 2017",
 	},
 	{
 		icon: Shield,
@@ -20,8 +21,8 @@ const reasons = [
 	},
 	{
 		icon: Clock4,
-		title: "24/7 Emergency Support",
-		description: "Always available to assist you in urgent situations",
+		title: "Emergency Support",
+		description: "Available to assist you in urgent situations",
 	},
 	{
 		icon: ThumbsUp,
