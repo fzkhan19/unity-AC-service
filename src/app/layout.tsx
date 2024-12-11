@@ -1,10 +1,11 @@
-import {Footer} from "@/components/footer";
+import { Footer } from "@/components/footer";
 import Providers from "@/components/layout/Providers";
-import {Navbar} from "@/components/navbar";
-import {JSON_LD, METADATA} from "@/constants/Metadata";
-import {cn} from "@/lib/utils";
-import type {Metadata} from "next";
-import {Dancing_Script, Inter} from "next/font/google";
+import { Navbar } from "@/components/navbar";
+import { JSON_LD, METADATA } from "@/constants/Metadata";
+import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import { Dancing_Script, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -30,6 +31,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body className={cn("", inter.variable, oswald.variable)}>
 				<main className="no-scrollbar overflow-x-hidden overflow-y-scroll scroll-smooth font-in">
+					<Analytics />
 					<Script
 						// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
 						dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
@@ -38,7 +40,7 @@ export default function RootLayout({
 					<Providers>
 						<Navbar />
 						{children}
-						<Footer/>
+						<Footer />
 					</Providers>
 				</main>
 			</body>
